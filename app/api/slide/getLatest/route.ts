@@ -6,8 +6,8 @@ export async function GET(request: Request) {
   try {
     await DbConnect();
 
-    const latestSlide = await GoogleSlide.findOne().sort({ createdAt: -1 }).limit(1);
-
+    const latestSlide = await GoogleSlide.findOne().sort({ createdAt: -1 });
+    console.log(latestSlide);
     if (!latestSlide) {
       return NextResponse.json({ message: 'No slides found' }, { status: 404 });
     }
