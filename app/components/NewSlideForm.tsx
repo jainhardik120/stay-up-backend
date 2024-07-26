@@ -33,7 +33,7 @@ const NewSlideForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-xl">
+    <div className="max-w-md mx-auto mt-10 p-6rounded-lg shadow-xl text-black">
       <h2 className="text-2xl font-bold mb-5">Add New Slide</h2>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
