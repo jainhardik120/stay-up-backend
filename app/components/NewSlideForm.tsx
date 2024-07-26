@@ -17,7 +17,7 @@ const NewSlideForm: React.FC = () => {
     setError('');
 
     try {
-      const response = await axios.post('/api/slides', { title, googleSlideId });
+      const response = await axios.post('/api/slides/insert', { title, googleSlideId });
       setMessage(response.data.message);
       setTitle('');
       setGoogleSlideId('');
